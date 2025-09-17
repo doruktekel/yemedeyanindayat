@@ -4,8 +4,23 @@ import { FiPhone } from "react-icons/fi";
 import { TbWorld } from "react-icons/tb";
 import { LiaGripLinesSolid } from "react-icons/lia";
 import Link from "next/link";
+import NavbarList from "./NavbarList";
 
 const Header = () => {
+  const navBarItems = [
+    {
+      name: "Anasayfa",
+      pathName: "/",
+    },
+    {
+      name: "Tariflerim",
+      pathName: "/tariflerim",
+    },
+    {
+      name: "Favorilerim",
+      pathName: "/favorilerim",
+    },
+  ];
   return (
     <div>
       <div className="flex justify-end items-center gap-5 border-b ">
@@ -22,28 +37,12 @@ const Header = () => {
         <figure>
           <Image src="/logo.png" alt="logo" width={100} height={100} />
         </figure>
-        <nav>
-          <ul className="flex items-center gap-3">
-            <Link
-              href="/"
-              className="px-4 py-3 rounded-full text-base font-medium text-white bg-main"
-            >
-              Ana Sayfa
-            </Link>
-            <Link
-              href="/tariflerim"
-              className="px-4 py-3 rounded-full text-base font-medium text-primary"
-            >
-              Tariflerim
-            </Link>
-            <Link
-              href="/favorilerim"
-              className="px-4 py-3 rounded-full text-base font-medium text-primary"
-            >
-              Favorilerim
-            </Link>
-          </ul>
-        </nav>
+
+        <ul>
+          {navBarItems.map((item, index) => (
+            <NavbarList key={index} item={item} />
+          ))}
+        </ul>
 
         <div className="flex gap-3 items-center">
           <div className="flex py-3 px-4 items-center gap-1">

@@ -17,3 +17,7 @@ body {
   --color-weak-border: #e9e9ea;
   --color-main: #ab0012;
 }
+
+.active {
+  @apply bg-main text-white;
+}
