@@ -2,9 +2,9 @@ import Image from "next/image";
 import { IoHelpBuoyOutline } from "react-icons/io5";
 import { FiPhone } from "react-icons/fi";
 import { TbWorld } from "react-icons/tb";
-import { LiaGripLinesSolid } from "react-icons/lia";
 import Link from "next/link";
 import NavbarList from "./NavbarList";
+import Menu from "./Menu";
 
 const Header = () => {
   const navBarItems = [
@@ -44,17 +44,12 @@ const Header = () => {
           ))}
         </ul>
 
-        <div className="flex gap-3 items-center">
-          <div className="flex py-3 px-4 items-center gap-1">
+        <div className="flex gap-3 items-center relative">
+          <div className="flex py-3 px-4 items-center gap-1 cursor-pointer hover:bg-gray-50 rounded-full">
             <TbWorld className="text-primary" size={24} />
             <span className="text-primary font-medium text-base">Turkce</span>
           </div>
-          <div className="flex py-3 px-4 items-center gap-1 border-default-border">
-            <LiaGripLinesSolid className="text-primary" size={24} />
-            <span className="text-primary font-medium text-base">
-              Giris Yap
-            </span>
-          </div>
+          <Menu />
         </div>
       </div>
     </div>

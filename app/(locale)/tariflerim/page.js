@@ -1,7 +1,7 @@
 import React from "react";
 
-const FavoritesPage = () => {
-  return <div>FavoritesPage</div>;
+const RecipesPage = () => {
+  return <div>RecipesPage</div>;
 };
 
-export default FavoritesPage;
+export default RecipesPage;
